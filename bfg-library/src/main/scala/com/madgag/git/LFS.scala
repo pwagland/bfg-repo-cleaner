@@ -20,7 +20,7 @@
 
 package com.madgag.git
 
-import java.nio.charset.Charset
+import java.nio.charset.StandardCharsets
 import java.security.{DigestOutputStream, MessageDigest}
 
 import com.google.common.base.Splitter
@@ -37,7 +37,7 @@ object LFS {
 
   val ObjectsPath = Path("lfs" , "objects")
 
-  val PointerCharset = Charset.forName("UTF-8")
+  val PointerCharset = StandardCharsets.UTF_8
 
   case class Pointer(shaHex: String, blobSize: Long) {
 
